@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int main()
+{
+    char input[35];
+    scanf("%s",input);
+    int inicio = 1;
+    int finalizar = 1;
+    int actual = inicio;
+    bool fin = false;
+    int contador = 0;
+    //printf("%c",input[contador]);
+    printf("%i",strlen(input));
+    while(fin==false){
+        if(contador > strlen(input)-1){
+            fin = true;
+            break;
+        }
+        //printf("%c \n",input[contador]);
+        if(actual==1){
+            if(input[contador]=='b')
+            {
+                actual=1;
+            }
+            if(input[contador]=='a'){
+                actual=2;
+            }
+            contador++;
+            continue;
+        }
+        if(actual==2){
+            if(input[contador]=='b'){
+                actual=2;
+            }
+            if(input[contador]=='a'){
+                actual=3;
+            }
+            contador++;
+            continue;
+        }
+        if(actual==3){
+            if(input[contador]=='b'){
+                actual=3;
+            }
+            if(input[contador]=='a'){
+                actual=1;
+            }
+            contador++;
+            continue;
+        }
+
+        //printf("%i \n",actual);
+        //printf("\n");
+        //printf("\n");
+    }
+    if(actual==finalizar){
+            printf("La cadena es correcta");
+    }
+    else
+    {
+        printf("La cadena es incorrecta");
+
+    }
+    getch();
+    return 0;
+}
