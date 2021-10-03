@@ -1,0 +1,18 @@
+package Automata;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+
+public class Automata {
+	public static void main (String[] args)
+	{
+		String exp="b*(ab*ab*a)*";
+		String t="bbb";
+		
+		Pattern pt = Pattern.compile(exp);
+		Matcher mt= pt.matcher(t);
+		boolean res=mt.matches();
+		System.out.println(res);
+	}
+
+}
