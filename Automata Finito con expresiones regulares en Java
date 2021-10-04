@@ -1,18 +1,36 @@
 package Automata;
 import java.util.regex.Pattern;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 
-
 public class Automata {
-	public static void main (String[] args)
-	{
-		String exp="b*(ab*ab*a)*";
-		String t="bbb";
-		
-		Pattern pt = Pattern.compile(exp);
-		Matcher mt= pt.matcher(t);
-		boolean res=mt.matches();
-		System.out.println(res);
-	}
 
+	    public static void main (String[] args) {
+	    	Scanner Scanner = new Scanner(System.in);
+	        String exp="b*+(ab*ab*ab*)*";
+	        String t;
+	        int i=0;
+			while( i<=5) {
+	        t=Scanner.next();
+	        Pattern pt = Pattern.compile(exp);
+	        Matcher mt= pt.matcher(t);
+	        boolean res=mt.matches();
+	        System.out.println(res);
+	        i++;
+			}
+	    }
+}
+
+public class ayut {
+	public static void main (String[] args) {
+	String cadena="a";
+	Pattern pat = Pattern.compile("(b+ab*ab*a)*");
+    Matcher mat = pat.matcher(cadena);
+    
+    if (mat.find()) {
+        System.out.println("Válido");                                                                            
+    } else {
+        System.out.println("No Válido");                                                                         
+    }
+}
 }
