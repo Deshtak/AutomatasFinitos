@@ -1,0 +1,13 @@
+%option noyywrap
+%option main
+%{
+    #include <stdio.h>
+    #include <conio.h>
+    #include <string.h>
+%}
+a [a]
+b [b]
+IDENTIFICADOR ({b}{a}+({b}{a}+({b}{a}+)))
+%%
+{IDENTIFICADOR} {printf("\nSe identifico: (%s)",yytext);}
+%%
