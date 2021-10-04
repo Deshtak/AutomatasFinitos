@@ -21,18 +21,3 @@ public class Automata {
 	    }
 }
 
-*//Esta seccion puede ir en una clase aparte*
-
-public class ayut {
-	public static void main (String[] args) {
-	String cadena="a";
-	Pattern pat = Pattern.compile("(b+ab*ab*a)*");
-    Matcher mat = pat.matcher(cadena);
-    
-    if (mat.find()) {
-        System.out.println("Válido");                                                                            
-    } else {
-        System.out.println("No Válido");                                                                         
-    }
-}
-}
