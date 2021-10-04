@@ -7,7 +7,7 @@
 %}
 a [a]
 b [b]
-IDENTIFICADOR ({b}{a}+({b}{a}+({b}{a}+)))
+EXPRE ({b}*{a}+({b}*{a}+({b}*{a}+)))*
 %%
-{IDENTIFICADOR} {printf("\nSe identifico: (%s)",yytext);}
+{EXPRE} {printf("\nSe identifico: (%s)",yytext);}
 %%
